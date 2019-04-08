@@ -29,6 +29,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             this,
             TimePickerDialog.OnTimeSetListener { _, hour, minute ->
                 Log.d("Aisatsu", "$hour:$minute")
+
+                if (hour in 0..1)
+                    Log.d("Aisatsu", "こんばんは")
+
+                if (hour in 2..9)
+                    Log.d("Aisatsu", "おはよう")
+
+                if (hour in 10..17)
+                    Log.d("Aisatsu", "こんにちは")
+
+                if (hour in 18..24)
+                    Log.d("Aisatsu", "こんばんは")
+
             },
             13, 0, true)
         timePickerDialog.show()
